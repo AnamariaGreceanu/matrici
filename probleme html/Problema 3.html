@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Problema 3</title>
+</head>
+<body>
+<style>
+	body { background-color:LightPink; }
+	pre {border: 1px solid powderblue;
+ 	     padding: 30px;
+	     font-size:20px;
+	    }
+</style>
+</head>
+<body>
+<h1 style="text-align:center">Rezolvare Problema3</h1>
+<pre>
+#include < iostream >					 Daca se cieste 5	      se va afisa "30".
+#include < fstream >						        3 1 8 5 4
+using namespace std;						        7 8 5 1 2
+int n,i,s,j,a[101][101];					        2 2 6 7 3
+int main()							        9 8 1 3 6 
+{									7 5 3 1 7
+    ifstream fin("nr.txt");
+    fin>>n;
+    s=0;
+    for (i=1;i<=n;i++)
+        for (j=1;j<=n;j++)
+        fin>>a[i][j];
+    for (i=1;i<=n;i++)
+        for (j=1;j<=n;j++)
+            if (i==j)
+        {
+            if (i==1) s=s+a[i][j+1];
+            else if (i==n) s=s+a[i][j-1];
+            else s=s+a[i][j-1]+a[i][j+1];
+        }
+    cout<< s << endl;
+    fin.close();
+    return 0;
+}
+</pre>
+</body>
+</html>
+
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Problema 1</title>
+<style>
+	body { background-color:LightPink; }
+	pre {border: 1px solid powderblue;
+ 	     padding: 30px;
+	     font-size:20px;
+	    }
+</style>
+</head>
+<body>
+<h1 style="text-align:center">Rezolvare Problema1</h1>
+<pre>
+#include < iostream >				Daca se citeste "4" se va afisa 1 2 3 4  
+#include < fstream >							        2 4 6 8
+using namespace std;								3 6 9 2
+int n,i,j,a[101][101];								4 8 2 6
+int main()
+{
+    ifstream fin ("nr.txt");
+    fin>>n;
+    for (i=1;i<=n;i++)
+        for (j=1;j<=n;j++)
+        a[i][j]=(i*j)%10;
+    for (i=1;i<=n;i++)
+    {for (j=1;j<=n;j++)
+        cout<< a[i][j]<<" ";
+        cout<< endl; }
+        fin.close();
+    return 0;
+}
+</pre>
+
+</body>
+</html>
+

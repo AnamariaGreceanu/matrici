@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Problema 5</title>
+<style>
+	body { background-color:LightPink; }
+	pre {border: 1px solid powderblue;
+ 	     padding: 30px;
+	     font-size:20px;
+	    }
+</style>
+</head>
+<body>
+<h1 style="text-align:center">Rezolvare Problema5</h1>
+<pre>
+#include < iostream >					Daca se citeste 3 4	     se va afisa 11 10 11.
+#include < fstream >							1 15 6 4
+using namespace std;							2 0 9 8
+int n,m,i,j,s,maxx,x,a[101][101];					3 9 1 7
+int main()
+{
+    ifstream fin("numere.txt");
+    fin>>n>>m;
+    for (i=1;i<=n;i++)
+        for (j=1;j<=m;j++)
+            fin>>a[i][j];
+    for (i=1;i<=n;i++)
+    {
+        maxx=0;
+        s=0;
+        for (j=1;j<=m;j++)
+        {
+            s=s+a[i][j];
+            if (a[i][j]>maxx) maxx=a[i][j];
+        }
+        x=s-maxx;
+        cout<< x << " ";
+    }
+        fin.close();
+    return 0;
+}
+
+</pre>
+</body>
+</html> 
